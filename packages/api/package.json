@@ -1,6 +1,6 @@
 {
-  "name": "readmeio-api",
-  "version": "5.0.8-lodash-fix",
+  "name": "api",
+  "version": "5.0.8",
   "description": "Magical SDK generation from an OpenAPI definition 🪄",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
