@@ -1,0 +1,53 @@
+{
+  "extends": ["@readme/eslint-config/docs"],
+  "globals": {
+    "fetch": true,
+    "Response": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    // @todo fix these eventually
+    "@typescript-eslint/no-explicit-any": "off",
+
+    // We use `@fixme` in some spots and it's fine.
+    "jsdoc/check-tag-names": "off",
+
+    // Though we aren't requiring JSDoc blocks to be present, if they are they should be properly
+    // formatted.
+    "jsdoc/require-jsdoc": "off",
+    "jsdoc/tag-lines": "off",
+
+    // TypeScript types are better suited for these cases instead.
+    "jsdoc/require-param": "off",
+    "jsdoc/require-param-type": "off",
+    "jsdoc/require-returns": "off",
+    "jsdoc/require-returns-type": "off"
+  },
+  "overrides": [
+    {
+      "files": ["bin/api"],
+      "rules": {
+        "import/extensions": "off",
+        "import/no-unresolved": "off"
+      }
+    },
+    {
+      "files": ["src/core/**/*.ts"],
+      "rules": {
+        "no-restricted-imports": ["error", {
+          "name": "fs/promises",
+          "message": "Please use `fs` instead as some client frameworks don't polyfill `fs/promises`."
+        }]
+      }
+    },
+    {
+      "files": ["example.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-console": "off"
+      }
+    }
+  ]
+}

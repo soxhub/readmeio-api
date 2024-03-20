@@ -1,0 +1,8 @@
+.api/
+.nyc_output/
+test/
+.eslint*
+.gitignore
+.mocharc.json
+.prettier*
+example.js
