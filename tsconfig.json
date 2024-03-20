@@ -18,7 +18,8 @@
       //
       // https://github.com/microsoft/TypeScript/issues/17042
       "form-data-encoder": [".sink.d.ts"]
-    }
+    },
+    "skipLibCheck": true
   },
   "include": ["./src/**/*"]
 }
