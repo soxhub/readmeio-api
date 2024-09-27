@@ -101,6 +101,9 @@
     "typescript": "^4.9.5",
     "unique-temp-dir": "^1.0.0"
   },
+  "overrides": {
+    "path-to-regexp@6.2.1": "6.3.0"
+  },
   "prettier": "@readme/eslint-config/prettier",
   "nyc": {
     "exclude": [
